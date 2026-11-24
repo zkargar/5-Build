@@ -17,9 +17,9 @@ body {
     margin: 0;
     background-color: #0f172a;
     color: #e2e8f0;
-    min-width:500px;
-    display:grid;
-    grid-template-columns:1fr;
+    min-width: 500px;
+    display: grid;
+    grid-template-columns: 1fr;
 }
 
 header {
@@ -65,10 +65,12 @@ main {
 }
 
 img {
-    width:100%;
+    width: 100%;
 }
 
-#screenings, #workshops, #collaborations {
+#screenings,
+#workshops,
+#collaborations {
     background-color: #1e293b;
     padding: 1rem;
     padding: 1rem;
@@ -83,16 +85,17 @@ aside {
 }
 
 a {
-    display:block;
-    background-color:#020617;
-    color:#e2e8f0;
-    padding:1rem 2rem;
-    text-decoration:none;
-    text-align:center;
+    display: block;
+    background-color: #020617;
+    color: #e2e8f0;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    text-align: center;
 }
+
 a:hover {
-    color:#020617;
-    background-color:#e2e8f0;
+    color: #020617;
+    background-color: #e2e8f0;
 }
 
 footer {
@@ -109,3 +112,29 @@ footer {
 /* target the nav and display it flex, spaceed around */
 /* target the .card-row to display flex */
 /* target the sections in .card-row witha width for 30% */
+
+@media (min-width: 800px) {
+    body {
+        grid-template-columns: 1fr 300px;
+    }
+
+    header,
+    nav,
+    footer {
+        grid-column: 1 / -1;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .card-row {
+        display: flex;
+        gap: 20px;
+    }
+
+    .card-row section {
+        width: 30%;
+    }
+}
